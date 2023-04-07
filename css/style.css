@@ -17,8 +17,17 @@ body {
   line-height: 1.7;
   color: #3f3d3f; }
 
+.heading-secondary {
+  font-size: 3.6rem; }
+
+.heading-tertiary {
+  font-size: 2.4rem; }
+
 .thumbnail__photo {
   width: 100%; }
+
+.thumbnail__text {
+  font-size: 1.6rem; }
 
 .row {
   max-width: 126.4rem;
@@ -37,3 +46,29 @@ body {
     width: calc((100% - 1.6rem) / 2); }
   .row .col-1-of-3 {
     width: calc((100% - 2 * 1.6rem) / 3); }
+
+.header {
+  height: 85vh;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top; }
+
+.navigation {
+  height: 5vh;
+  position: relative; }
+  .navigation__logo-box {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .navigation__logo {
+    height: 3.6rem; }
+  .navigation__chechbox {
+    display: none; }
+  .navigation__button {
+    display: none; }
+  .navigation__nav {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .navigation__item {
+    display: inline-block; }
