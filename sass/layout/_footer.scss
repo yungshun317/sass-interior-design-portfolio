@@ -1,0 +1,27 @@
+.footer {
+  background-color: $color-gray-light;
+  text-align: center;
+  font-size: 1.6rem;
+
+  &__logo-box {
+    text-align: center;
+  }
+
+  &__logo {
+    width: 16rem;
+    height: auto;
+  }
+
+  &__navigation {
+    display: inline-block;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
