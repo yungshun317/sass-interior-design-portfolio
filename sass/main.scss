@@ -1,5 +1,6 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
+@import "abstracts/utilities";
 
 @import "base/base";
 @import "base/typography";
@@ -10,3 +11,5 @@
 @import "layout/grid";
 @import "layout/header";
 @import "layout/navigation";
+
+@import "pages/home";

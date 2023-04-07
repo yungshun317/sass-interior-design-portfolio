@@ -1,6 +1,7 @@
 .navigation {
   height: 5vh;
   position: relative;
+  background-color: darken($color-gray-light, 2%);
 
   &__logo-box {
     position: absolute;
@@ -31,5 +32,13 @@
 
   &__item {
     display: inline-block;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
   }
 }
