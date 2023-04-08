@@ -39,6 +39,50 @@ body {
 .thumbnail__text {
   font-size: 1.6rem; }
 
+.carousel {
+  height: 100%;
+  text-align: center; }
+  .carousel__radio {
+    display: none; }
+  .carousel__slider {
+    width: 100%;
+    height: 100%; }
+  #slide1:checked ~ .carousel__slider .carousel__inner {
+    margin-left: 0; }
+  #slide2:checked ~ .carousel__slider .carousel__inner {
+    margin-left: -100%; }
+  #slide3:checked ~ .carousel__slider .carousel__inner {
+    margin-left: -200%; }
+  #slide1:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(1),
+  #slide2:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(2),
+  #slide3:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(3) {
+    background: red; }
+  .carousel__inner {
+    width: 500%;
+    height: 100%; }
+  .carousel__image-slide {
+    width: 20%;
+    height: 100%;
+    float: left; }
+  .carousel__image {
+    width: 100%;
+    height: 100%; }
+  .carousel__labels {
+    margin: 0 auto;
+    /*
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+     */ }
+  .carousel__bullet {
+    width: 1rem;
+    height: 1rem;
+    border-radius: .5rem;
+    background: gray;
+    display: inline-block;
+    margin: 0 .1rem;
+    cursor: pointer; }
+
 .footer {
   background-color: #f0f0f1;
   text-align: center;
@@ -76,9 +120,11 @@ body {
 
 .header {
   height: 85vh;
+  /*
   background-image: url(../img/hero.jpg);
   background-size: cover;
-  background-position: top; }
+  background-position: top;
+   */ }
 
 .navigation {
   height: 5vh;
