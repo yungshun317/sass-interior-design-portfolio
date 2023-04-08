@@ -41,32 +41,61 @@ body {
 
 .carousel {
   height: 100%;
-  text-align: center; }
+  text-align: center;
+  /* Autoplay for slides
+  #slide1:checked ~ &__slider &__inner {
+    margin-left: 0;
+  }
+
+  #slide2:checked ~ &__slider &__inner {
+    margin-left: -100%;
+  }
+
+  #slide3:checked ~ &__slider &__inner {
+    margin-left: -200%;
+  }
+
+  @keyframes slide {
+    0%, 25% {
+      margin-left: 0;
+    }
+    33.333333%, 50% {
+      margin-left: -100%;
+    }
+    66.666667%, 80% {
+      margin-left: -200%;
+    }
+  }
+
+  & > #play1:checked ~ &__slider &__inner {
+    animation: slide 12300ms infinite;
+  }
+   */ }
   .carousel__radio {
     display: none; }
   .carousel__slider {
     width: 100%;
     height: 100%;
     overflow: hidden; }
-  #slide1:checked ~ .carousel__slider .carousel__inner {
-    margin-left: 0; }
-  #slide2:checked ~ .carousel__slider .carousel__inner {
-    margin-left: -100%; }
-  #slide3:checked ~ .carousel__slider .carousel__inner {
-    margin-left: -200%; }
   #slide1:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(1),
   #slide2:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(2),
   #slide3:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(3) {
     background: red; }
   .carousel__inner {
     width: 500%;
-    height: 100%; }
+    height: 100%;
+    position: relative; }
   .carousel__image-slide, .carousel__bullet {
     transition: all 0.5s ease-out; }
   .carousel__image-slide {
     width: 20%;
     height: 100%;
-    float: left; }
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
   .carousel__image {
     width: 100%;
     height: 100%; }
@@ -86,15 +115,53 @@ body {
     margin: 0 .1rem;
     cursor: pointer; }
 
-@keyframes slide {
-  0%, 25% {
-    margin-left: 0; }
-  33.333333%, 50% {
-    margin-left: -100%; }
-  66.666667%, 80% {
-    margin-left: -200%; } }
-  .carousel > #play1:checked ~ .carousel__slider .carousel__inner {
-    animation: slide 12300ms infinite; }
+@keyframes fade1 {
+  0% {
+    opacity: 1; }
+  20% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .carousel__inner > *:nth-child(1) {
+    animation: fade1 40s infinite; }
+
+@keyframes fade2 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 1; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+  .carousel__inner > *:nth-child(2) {
+    animation: fade2 40s infinite; }
+
+@keyframes fade3 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  60% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+  .carousel__inner > *:nth-child(3) {
+    animation: fade3 40s infinite; }
 
 @keyframes bullet {
   0%, 33.333333% {

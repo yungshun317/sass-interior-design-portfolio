@@ -12,18 +12,6 @@
     overflow: hidden;
   }
 
-  #slide1:checked ~ &__slider &__inner {
-    margin-left: 0;
-  }
-
-  #slide2:checked ~ &__slider &__inner {
-    margin-left: -100%;
-  }
-
-  #slide3:checked ~ &__slider &__inner {
-    margin-left: -200%;
-  }
-
   #slide1:checked ~ &__labels &__bullets &__bullet:nth-child(1),
   #slide2:checked ~ &__labels &__bullets &__bullet:nth-child(2),
   #slide3:checked ~ &__labels &__bullets &__bullet:nth-child(3) {
@@ -33,6 +21,7 @@
   &__inner {
     width: 500%;
     height: 100%;
+    position: relative;
   }
 
   &__image-slide,
@@ -44,6 +33,11 @@
     width: 20%;
     height: 100%;
     float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 
   &__image {
@@ -73,7 +67,59 @@
     cursor: pointer;
   }
 
-  // Autoplay for slides
+  // Cross-fading effect
+  @keyframes fade1 {
+    0% { opacity:1 }
+    20% { opacity:0 }
+    40% { opacity:0 }
+    60% { opacity:0 }
+    80% { opacity:0 }
+    100% { opacity:1 }
+  }
+
+  &__inner > *:nth-child(1) {
+    animation: fade1 40s infinite;
+  }
+
+  @keyframes fade2 {
+    0% { opacity:0 }
+    20% { opacity:1 }
+    40% { opacity:0 }
+    60% { opacity:0 }
+    80% { opacity:0 }
+    100% { opacity:0 }
+  }
+
+  &__inner > *:nth-child(2) {
+    animation: fade2 40s infinite;
+  }
+
+  @keyframes fade3 {
+    0% { opacity:0 }
+    20% { opacity:0 }
+    40% { opacity:1 }
+    60% { opacity:0 }
+    80% { opacity:0 }
+    100% { opacity:0 }
+  }
+
+  &__inner > *:nth-child(3) {
+    animation: fade3 40s infinite;
+  }
+
+  /* Autoplay for slides
+  #slide1:checked ~ &__slider &__inner {
+    margin-left: 0;
+  }
+
+  #slide2:checked ~ &__slider &__inner {
+    margin-left: -100%;
+  }
+
+  #slide3:checked ~ &__slider &__inner {
+    margin-left: -200%;
+  }
+
   @keyframes slide {
     0%, 25% {
       margin-left: 0;
@@ -89,6 +135,7 @@
   & > #play1:checked ~ &__slider &__inner {
     animation: slide 12300ms infinite;
   }
+   */
 
   // Autoplay for bullets
   @keyframes bullet {
