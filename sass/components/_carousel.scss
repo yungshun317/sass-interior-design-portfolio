@@ -9,6 +9,7 @@
   &__slider {
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
 
   #slide1:checked ~ &__slider &__inner {
@@ -32,6 +33,11 @@
   &__inner {
     width: 500%;
     height: 100%;
+  }
+
+  &__image-slide,
+  &__bullet {
+    transition: all 0.5s ease-out;
   }
 
   &__image-slide {
@@ -65,5 +71,45 @@
     display: inline-block;
     margin: 0 .1rem;
     cursor: pointer;
+  }
+
+  // Autoplay for slides
+  @keyframes slide {
+    0%, 25% {
+      margin-left: 0;
+    }
+    33.333333%, 50% {
+      margin-left: -100%;
+    }
+    66.666667%, 80% {
+      margin-left: -200%;
+    }
+  }
+
+  & > #play1:checked ~ &__slider &__inner {
+    animation: slide 12300ms infinite;
+  }
+
+  // Autoplay for bullets
+  @keyframes bullet {
+    0%, 33.333333% {
+      background: red;
+    }
+
+    33.333333%, 100% {
+      background: gray;
+    }
+  }
+
+  #play1:checked ~ &__labels &__bullets &__bullet:nth-child(1) {
+    animation: bullet 12300ms infinite -1000ms;
+  }
+
+  #play1:checked ~ &__labels &__bullets &__bullet:nth-child(2) {
+    animation: bullet 12300ms infinite 3100ms;
+  }
+
+  #play1:checked ~ &__labels &__bullets &__bullet:nth-child(3) {
+    animation: bullet 12300ms infinite 7200ms;
   }
 }
