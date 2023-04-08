@@ -42,7 +42,7 @@ body {
 .carousel {
   height: 100%;
   text-align: center;
-  /* Autoplay for slides
+  /* Autoplay for 3 slides
   #slide1:checked ~ &__slider &__inner {
     margin-left: 0;
   }
@@ -70,6 +70,29 @@ body {
   & > #play1:checked ~ &__slider &__inner {
     animation: slide 12300ms infinite;
   }
+   */
+  /* Autoplay for 3 bullets
+  @keyframes bullet {
+    0%, 33.333333% {
+      background: red;
+    }
+
+    33.333333%, 100% {
+      background: gray;
+    }
+  }
+
+  #play1:checked ~ &__labels &__bullets &__bullet:nth-child(1) {
+    animation: bullet 12300ms infinite -1000ms;
+  }
+
+  #play1:checked ~ &__labels &__bullets &__bullet:nth-child(2) {
+    animation: bullet 12300ms infinite 3100ms;
+  }
+
+  #play1:checked ~ &__labels &__bullets &__bullet:nth-child(3) {
+    animation: bullet 12300ms infinite 7200ms;
+  }
    */ }
   .carousel__radio {
     display: none; }
@@ -85,8 +108,6 @@ body {
     width: 500%;
     height: 100%;
     position: relative; }
-  .carousel__image-slide, .carousel__bullet {
-    transition: all 0.5s ease-out; }
   .carousel__image-slide {
     width: 20%;
     height: 100%;
@@ -100,7 +121,7 @@ body {
     width: 100%;
     height: 100%; }
   .carousel__labels {
-    margin: 0 auto;
+    margin-top: 2rem;
     /*
     position: absolute;
     left: 50%;
@@ -114,6 +135,8 @@ body {
     display: inline-block;
     margin: 0 .1rem;
     cursor: pointer; }
+    .carousel__bullet:not(:last-child) {
+      margin-right: 2rem; }
 
 @keyframes fade1 {
   0% {
@@ -163,17 +186,117 @@ body {
   .carousel__inner > *:nth-child(3) {
     animation: fade3 40s infinite; }
 
-@keyframes bullet {
-  0%, 33.333333% {
-    background: red; }
-  33.333333%, 100% {
-    background: gray; } }
-  #play1:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(1) {
-    animation: bullet 12300ms infinite -1000ms; }
-  #play1:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(2) {
-    animation: bullet 12300ms infinite 3100ms; }
-  #play1:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(3) {
-    animation: bullet 12300ms infinite 7200ms; }
+@keyframes fade4 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+  .carousel__inner > *:nth-child(4) {
+    animation: fade4 40s infinite; }
+
+@keyframes fade5 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+  .carousel__inner > *:nth-child(5) {
+    animation: fade5 40s infinite; }
+
+@keyframes bullet1 {
+  0% {
+    background: #3f3d3f; }
+  20% {
+    background: #e8e8ea; }
+  40% {
+    background: #e8e8ea; }
+  60% {
+    background: #e8e8ea; }
+  80% {
+    background: #e8e8ea; }
+  100% {
+    background: #3f3d3f; } }
+  .carousel__bullet:nth-child(1) {
+    animation: bullet1 40s infinite; }
+
+@keyframes bullet2 {
+  0% {
+    background: #e8e8ea; }
+  20% {
+    background: #3f3d3f; }
+  40% {
+    background: #e8e8ea; }
+  60% {
+    background: #e8e8ea; }
+  80% {
+    background: #e8e8ea; }
+  100% {
+    background: #e8e8ea; } }
+  .carousel__bullet:nth-child(2) {
+    animation: bullet2 40s infinite; }
+
+@keyframes bullet3 {
+  0% {
+    background: #e8e8ea; }
+  20% {
+    background: #e8e8ea; }
+  40% {
+    background: #3f3d3f; }
+  60% {
+    background: #e8e8ea; }
+  80% {
+    background: #e8e8ea; }
+  100% {
+    background: #e8e8ea; } }
+  .carousel__bullet:nth-child(3) {
+    animation: bullet3 40s infinite; }
+
+@keyframes bullet4 {
+  0% {
+    background: #e8e8ea; }
+  20% {
+    background: #e8e8ea; }
+  40% {
+    background: #e8e8ea; }
+  60% {
+    background: #3f3d3f; }
+  80% {
+    background: #e8e8ea; }
+  100% {
+    background: #e8e8ea; } }
+  .carousel__bullet:nth-child(4) {
+    animation: bullet4 40s infinite; }
+
+@keyframes bullet5 {
+  0% {
+    background: #e8e8ea; }
+  20% {
+    background: #e8e8ea; }
+  40% {
+    background: #e8e8ea; }
+  60% {
+    background: #e8e8ea; }
+  80% {
+    background: #3f3d3f; }
+  100% {
+    background: #e8e8ea; } }
+  .carousel__bullet:nth-child(5) {
+    animation: bullet5 40s infinite; }
 
 .footer {
   background-color: #f0f0f1;

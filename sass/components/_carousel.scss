@@ -26,7 +26,7 @@
 
   &__image-slide,
   &__bullet {
-    transition: all 0.5s ease-out;
+    // transition: all 0.5s ease-out;
   }
 
   &__image-slide {
@@ -46,7 +46,7 @@
   }
 
   &__labels {
-    margin: 0 auto;
+    margin-top: 2rem;
     /*
     position: absolute;
     left: 50%;
@@ -65,16 +65,20 @@
     display: inline-block;
     margin: 0 .1rem;
     cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
   }
 
   // Cross-fading effect
   @keyframes fade1 {
-    0% { opacity:1 }
-    20% { opacity:0 }
-    40% { opacity:0 }
-    60% { opacity:0 }
-    80% { opacity:0 }
-    100% { opacity:1 }
+    0% { opacity: 1 }
+    20% { opacity: 0 }
+    40% { opacity: 0 }
+    60% { opacity: 0 }
+    80% { opacity: 0 }
+    100% { opacity: 1 }
   }
 
   &__inner > *:nth-child(1) {
@@ -82,12 +86,12 @@
   }
 
   @keyframes fade2 {
-    0% { opacity:0 }
-    20% { opacity:1 }
-    40% { opacity:0 }
-    60% { opacity:0 }
-    80% { opacity:0 }
-    100% { opacity:0 }
+    0% { opacity: 0 }
+    20% { opacity: 1 }
+    40% { opacity: 0 }
+    60% { opacity: 0 }
+    80% { opacity: 0 }
+    100% { opacity: 0 }
   }
 
   &__inner > *:nth-child(2) {
@@ -95,19 +99,110 @@
   }
 
   @keyframes fade3 {
-    0% { opacity:0 }
-    20% { opacity:0 }
-    40% { opacity:1 }
-    60% { opacity:0 }
-    80% { opacity:0 }
-    100% { opacity:0 }
+    0% { opacity: 0 }
+    20% { opacity: 0 }
+    40% { opacity: 1 }
+    60% { opacity: 0 }
+    80% { opacity: 0 }
+    100% { opacity: 0 }
   }
 
   &__inner > *:nth-child(3) {
     animation: fade3 40s infinite;
   }
 
-  /* Autoplay for slides
+  @keyframes fade4 {
+    0% { opacity: 0 }
+    20% { opacity: 0 }
+    40% { opacity: 0 }
+    60% { opacity: 1 }
+    80% { opacity: 0 }
+    100% { opacity: 0 }
+  }
+
+  &__inner > *:nth-child(4) {
+    animation: fade4 40s infinite;
+  }
+
+  @keyframes fade5 {
+    0% { opacity: 0 }
+    20% { opacity: 0 }
+    40% { opacity: 0 }
+    60% { opacity: 0 }
+    80% { opacity: 1 }
+    100% { opacity: 0 }
+  }
+
+  &__inner > *:nth-child(5) {
+    animation: fade5 40s infinite;
+  }
+
+  @keyframes bullet1 {
+    0% { background: $color-gray-dark }
+    20% { background: darken($color-gray-light, 5%) }
+    40% { background: darken($color-gray-light, 5%)  }
+    60% { background: darken($color-gray-light, 5%)  }
+    80% { background: darken($color-gray-light, 5%)  }
+    100% { background: $color-gray-dark }
+  }
+
+  &__bullet:nth-child(1) {
+    animation: bullet1 40s infinite;
+  }
+
+  @keyframes bullet2 {
+    0% { background: darken($color-gray-light, 5%)  }
+    20% { background: $color-gray-dark }
+    40% { background: darken($color-gray-light, 5%)  }
+    60% { background: darken($color-gray-light, 5%)  }
+    80% { background: darken($color-gray-light, 5%)  }
+    100% { background: darken($color-gray-light, 5%)  }
+  }
+
+  &__bullet:nth-child(2) {
+    animation: bullet2 40s infinite;
+  }
+
+  @keyframes bullet3 {
+    0% { background: darken($color-gray-light, 5%)  }
+    20% { background: darken($color-gray-light, 5%)  }
+    40% { background: $color-gray-dark }
+    60% { background: darken($color-gray-light, 5%)  }
+    80% { background: darken($color-gray-light, 5%)  }
+    100% { background: darken($color-gray-light, 5%)  }
+  }
+
+  &__bullet:nth-child(3) {
+    animation: bullet3 40s infinite;
+  }
+
+  @keyframes bullet4 {
+    0% { background: darken($color-gray-light, 5%)  }
+    20% { background: darken($color-gray-light, 5%)  }
+    40% { background: darken($color-gray-light, 5%)  }
+    60% { background: $color-gray-dark }
+    80% { background: darken($color-gray-light, 5%)  }
+    100% { background: darken($color-gray-light, 5%)  }
+  }
+
+  &__bullet:nth-child(4) {
+    animation: bullet4 40s infinite;
+  }
+
+  @keyframes bullet5 {
+    0% { background: darken($color-gray-light, 5%)  }
+    20% { background: darken($color-gray-light, 5%)  }
+    40% { background: darken($color-gray-light, 5%)  }
+    60% { background: darken($color-gray-light, 5%)  }
+    80% { background: $color-gray-dark }
+    100% { background: darken($color-gray-light, 5%)  }
+  }
+
+  &__bullet:nth-child(5) {
+    animation: bullet5 40s infinite;
+  }
+
+  /* Autoplay for 3 slides
   #slide1:checked ~ &__slider &__inner {
     margin-left: 0;
   }
@@ -137,7 +232,7 @@
   }
    */
 
-  // Autoplay for bullets
+  /* Autoplay for 3 bullets
   @keyframes bullet {
     0%, 33.333333% {
       background: red;
@@ -159,4 +254,5 @@
   #play1:checked ~ &__labels &__bullets &__bullet:nth-child(3) {
     animation: bullet 12300ms infinite 7200ms;
   }
+   */
 }
