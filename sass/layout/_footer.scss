@@ -29,11 +29,14 @@
       text-transform: uppercase;
       font-size: $default-font-size;
       color: $color-gray-dark;
+      transition: all .2s;
     }
 
     &:hover,
     &:active {
       color: $color-primary;
+      text-shadow: 0 0.25rem 1rem rgba($color-black, .4);
+
     }
   }
 }
