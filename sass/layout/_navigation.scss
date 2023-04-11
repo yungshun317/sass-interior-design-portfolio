@@ -1,12 +1,14 @@
 .navigation {
-  height: 5vh;
+  height: 7.5vh;
   position: relative;
-  background-color: darken($color-gray-light, 2%);
+  background-color: $color-gray-light;
+  width: $grid-width;
+  margin: 0 auto;
 
   &__logo-box {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 2.5rem;
   }
 
   &__logo {
@@ -24,14 +26,18 @@
   &__nav {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 2.5rem;
   }
 
   &__list {
+
   }
 
   &__item {
     display: inline-block;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
   }
 
   &__link {
@@ -39,6 +45,13 @@
     &:visited {
       text-decoration: none;
       text-transform: uppercase;
+      font-size: $default-font-size;
+      color: $color-gray-dark;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
     }
   }
 }

@@ -1,9 +1,11 @@
 .footer {
   background-color: darken($color-gray-light, 2%);
   text-align: center;
-  font-size: 1.6rem;
+  font-size: $default-font-size;
+  padding-bottom: 4rem;
 
   &__logo-box {
+    padding-top: 2rem;
     text-align: center;
   }
 
@@ -25,6 +27,13 @@
     &:visited {
       text-decoration: none;
       text-transform: uppercase;
+      font-size: $default-font-size;
+      color: $color-gray-dark;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
     }
   }
 }
