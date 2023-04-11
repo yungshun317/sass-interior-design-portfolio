@@ -43,6 +43,27 @@
   &__image {
     width: 100%;
     height: 100%;
+    background-size: cover;
+
+    &--p1 {
+      background-image: url(../img/hero-1.jpg);
+    }
+
+    &--p2 {
+      background-image: url(../img/hero-2.jpg);
+    }
+
+    &--p3 {
+      background-image: url(../img/hero-3.jpg);
+    }
+
+    &--p4 {
+      background-image: url(../img/hero-4.jpg);
+    }
+
+    &--p5 {
+      background-image: url(../img/hero-5.jpg);
+    }
   }
 
   &__labels {

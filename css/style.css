@@ -119,7 +119,18 @@ body {
     bottom: 0; }
   .carousel__image {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    background-size: cover; }
+    .carousel__image--p1 {
+      background-image: url(../img/hero-1.jpg); }
+    .carousel__image--p2 {
+      background-image: url(../img/hero-2.jpg); }
+    .carousel__image--p3 {
+      background-image: url(../img/hero-3.jpg); }
+    .carousel__image--p4 {
+      background-image: url(../img/hero-4.jpg); }
+    .carousel__image--p5 {
+      background-image: url(../img/hero-5.jpg); }
   .carousel__labels {
     margin-top: 2rem;
     /*
