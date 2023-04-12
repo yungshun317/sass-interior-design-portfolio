@@ -1,26 +1,37 @@
 .thumbnail {
   text-align: center;
+  // opacity: 0;
+
+  /*
+  &__inview {
+    opacity: 1;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+  }
+   */
 
   &__photo {
     width: 100%;
-    transition: all .2s;
-
-    &:hover {
-      filter: brightness(120%) contrast(120%);
-      box-shadow: 0 0.25rem 1rem rgba($color-black, .4);
-    }
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
   }
 
-  &:hover &__heading:not(:hover) {
-    transform: scale(1.05);
-    color: $color-primary;
-    text-shadow: 0 0.25rem 1rem rgba($color-black, .4);
+  &:hover &__photo {
+    filter: brightness(120%) contrast(120%);
+    // box-shadow: 0 0.25rem 1rem rgba($color-black, .4);
   }
 
-  &:hover &__text:not(:hover) {
-    transform: scale(1.05);
+  &:hover &__heading {
     color: $color-primary;
-    text-shadow: 0 0.25rem 1rem rgba($color-black, .4);
+    // transform: scale(1.05);
+    // text-shadow: 0 0.25rem 1rem rgba($color-black, .4);
+  }
+
+  &:hover &__text {
+    color: $color-primary;
+    // transform: scale(1.05);
+    // text-shadow: 0 0.25rem 1rem rgba($color-black, .4);
   }
 
   &__heading {
@@ -31,5 +42,4 @@
     font-size: 1.6rem;
     transition: all .2s;
   }
-
 }

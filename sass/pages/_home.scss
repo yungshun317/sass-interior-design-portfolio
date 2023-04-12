@@ -3,4 +3,26 @@
   margin-bottom: 8rem;
   text-decoration: none;
   text-transform: uppercase;
+
+  .row .col-1-of-3 .thumbnail {
+    opacity: 0;
+  }
+
+  .row .col-1-of-3 .thumbnail__inview {
+    opacity: 1;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .row .col-1-of-3:nth-child(1) .thumbnail__inview {
+    transition-delay: 0.5s;
+  }
+
+  .row .col-1-of-3:nth-child(2) .thumbnail__inview {
+    transition-delay: 1s;
+  }
+
+  .row .col-1-of-3:nth-child(3) .thumbnail__inview {
+    transition-delay: 1.5s;
+  }
 }
