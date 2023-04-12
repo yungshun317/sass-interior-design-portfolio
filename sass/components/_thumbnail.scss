@@ -1,5 +1,9 @@
 .thumbnail {
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   // opacity: 0;
 
   /*
@@ -13,8 +17,12 @@
 
   &__photo {
     width: 100%;
+    background-size: cover;
     transition: all 0.4s ease-in-out;
     cursor: pointer;
+
+    flex: 1 1 auto;
+    object-fit: cover;
   }
 
   &:hover &__photo {
@@ -22,24 +30,22 @@
     // box-shadow: 0 0.25rem 1rem rgba($color-black, .4);
   }
 
-  &:hover &__heading {
+  &:hover &__test-box {
     color: $color-primary;
     // transform: scale(1.05);
     // text-shadow: 0 0.25rem 1rem rgba($color-black, .4);
   }
 
-  &:hover &__text {
-    color: $color-primary;
-    // transform: scale(1.05);
-    // text-shadow: 0 0.25rem 1rem rgba($color-black, .4);
+  &__test-box {
+    margin-top: 1.6rem;
+    transition: all .2s;
   }
 
   &__heading {
-    transition: all .2s;
+
   }
 
   &__text {
     font-size: 1.6rem;
-    transition: all .2s;
   }
 }
