@@ -75,6 +75,14 @@ body {
 .carousel {
   height: 100%;
   text-align: center;
+  position: relative;
+  /*
+  #slide1:checked ~ &__labels &__bullets &__bullet:nth-child(1),
+  #slide2:checked ~ &__labels &__bullets &__bullet:nth-child(2),
+  #slide3:checked ~ &__labels &__bullets &__bullet:nth-child(3) {
+    background: red;
+  }
+   */
   /* Autoplay for 3 slides
   #slide1:checked ~ &__slider &__inner {
     margin-left: 0;
@@ -127,26 +135,29 @@ body {
     animation: bullet 12300ms infinite 7200ms;
   }
    */ }
+  .carousel__caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fbfbfb;
+    z-index: 100; }
   .carousel__radio {
     display: none; }
   .carousel__slider {
     width: 100%;
     height: 100%;
     overflow: hidden; }
-  #slide1:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(1),
-  #slide2:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(2),
-  #slide3:checked ~ .carousel__labels .carousel__bullets .carousel__bullet:nth-child(3) {
-    background: red; }
   .carousel__inner {
     width: 100%;
     height: 100%;
     position: relative; }
   .carousel__image-slide {
-    width: 110%;
+    width: 120%;
     height: 100%;
     float: left;
     position: absolute;
-    left: 0;
+    left: -10%;
     top: 0;
     right: 0;
     bottom: 0; }
@@ -197,8 +208,24 @@ body {
     margin-left: 5%; }
   100% {
     opacity: 1; } }
-  .carousel__inner > *:nth-child(1) {
-    animation: fadeSlide1 40s infinite; }
+
+@keyframes fade1 {
+  0% {
+    opacity: 1; }
+  20% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .carousel__inner > *:nth-child(1) .carousel__image {
+    animation: fadeSlide1 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+  .carousel__caption--c1 {
+    animation: fade1 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
 
 @keyframes fadeSlide2 {
   0% {
@@ -215,8 +242,24 @@ body {
     opacity: 0; }
   100% {
     opacity: 0; } }
-  .carousel__inner > *:nth-child(2) {
-    animation: fadeSlide2 40s infinite; }
+
+@keyframes fade2 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 1; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+  .carousel__inner > *:nth-child(2) .carousel__image {
+    animation: fadeSlide2 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+  .carousel__caption--c2 {
+    animation: fade2 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
 
 @keyframes fadeSlide3 {
   0% {
@@ -233,8 +276,24 @@ body {
     opacity: 0; }
   100% {
     opacity: 0; } }
-  .carousel__inner > *:nth-child(3) {
-    animation: fadeSlide3 40s infinite; }
+
+@keyframes fade3 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  60% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+  .carousel__inner > *:nth-child(3) .carousel__image {
+    animation: fadeSlide3 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+  .carousel__caption--c3 {
+    animation: fade3 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
 
 @keyframes fadeSlide4 {
   0% {
@@ -251,8 +310,24 @@ body {
     margin-left: -5%; }
   100% {
     opacity: 0; } }
-  .carousel__inner > *:nth-child(4) {
-    animation: fadeSlide4 40s infinite; }
+
+@keyframes fade4 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+  .carousel__inner > *:nth-child(4) .carousel__image {
+    animation: fadeSlide4 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+  .carousel__caption--c4 {
+    animation: fade4 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
 
 @keyframes fadeSlide5 {
   0% {
@@ -269,9 +344,24 @@ body {
   100% {
     opacity: 0;
     margin-left: -5%; } }
-  .carousel__inner > *:nth-child(5) {
-    animation-timing-function: linear;
-    animation: fadeSlide5 40s infinite; }
+
+@keyframes fade5 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+  .carousel__inner > *:nth-child(5) .carousel__image {
+    animation: fadeSlide5 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+  .carousel__caption--c5 {
+    animation: fade5 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
 
 @keyframes bullet1 {
   0% {
