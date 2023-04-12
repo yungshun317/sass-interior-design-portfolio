@@ -25,16 +25,18 @@ body {
   color: #3f3d3f; }
 
 .heading-primary {
-  font-size: 6rem; }
+  font-size: 6rem;
+  font-weight: 100; }
 
 .heading-secondary {
-  font-size: 3.6rem; }
+  font-size: 3.6rem;
+  font-weight: 100; }
 
 .heading-tertiary {
-  font-size: 2.4rem; }
+  font-size: 2.4rem;
+  font-weight: 100; }
 
 .thumbnail {
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -55,13 +57,20 @@ body {
     object-fit: cover; }
   .thumbnail:hover .thumbnail__photo {
     filter: brightness(120%) contrast(120%); }
-  .thumbnail:hover .thumbnail__test-box {
-    color: #004469; }
-  .thumbnail__test-box {
+  .thumbnail:hover .thumbnail__text-box {
+    color: #004469;
+    border-bottom: 0.1rem solid #004469; }
+  .thumbnail__text-box {
     margin-top: 1.6rem;
-    transition: all .2s; }
-  .thumbnail__text {
+    padding-bottom: 1.6rem;
+    transition: all .2s;
+    border-bottom: 0.1rem solid #3f3d3f; }
+    .thumbnail__text-box span {
+      float: right; }
+  .thumbnail__heading {
     font-size: 1.6rem; }
+  .thumbnail__text {
+    font-size: 1.2rem; }
 
 .carousel {
   height: 100%;
@@ -369,7 +378,7 @@ body {
     color: #004469; }
 
 .row {
-  max-width: 126.4rem;
+  max-width: 144rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 6rem; }
@@ -398,7 +407,7 @@ body {
   height: 7.5vh;
   position: relative;
   background-color: #f5f5f6;
-  width: 126.4rem;
+  width: 144rem;
   margin: 0 auto; }
   .navigation__logo-box {
     position: absolute;
