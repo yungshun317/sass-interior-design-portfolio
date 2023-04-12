@@ -48,6 +48,8 @@ body {
     transition-delay: 1s;
   }
    */ }
+  .thumbnail a {
+    display: contents; }
   .thumbnail__photo {
     width: 100%;
     background-size: cover;
