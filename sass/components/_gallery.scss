@@ -15,7 +15,7 @@
       margin-bottom: 1.6rem;
     }
 
-    &:hover {
+    &:hover img {
       filter: brightness(120%) contrast(120%);
     }
 
@@ -31,7 +31,7 @@
     }
   }
 
-  &:hover &__image:not(:hover) {
+  &:hover &__image:not(:hover) img {
     filter: brightness(80%) contrast(80%);
   }
 }
