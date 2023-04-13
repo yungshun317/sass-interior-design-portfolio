@@ -9,27 +9,15 @@
     height: 62.5rem;
     flex-grow: 1;
     display: flex;
+    transition: all 0.4s ease-in-out;
+
     &:not(:last-child) {
       margin-bottom: 1.6rem;
     }
 
-    /*
-    &:nth-child(4n+1) {
-      flex-basis: 25rem;
+    &:hover {
+      filter: brightness(120%) contrast(120%);
     }
-
-    &:nth-child(4n+1) {
-      flex-basis: 32.5rem;
-    }
-
-    &:nth-child(4n+1) {
-      flex-basis: 18rem;
-    }
-
-    &:nth-child(4n+1) {
-      flex-basis: 38rem;
-    }
-     */
 
     a {
       display: contents;
@@ -41,5 +29,9 @@
       object-fit: cover;
       flex: 1 1 auto;
     }
+  }
+
+  &:hover &__image:not(:hover) {
+    filter: brightness(80%) contrast(80%);
   }
 }
