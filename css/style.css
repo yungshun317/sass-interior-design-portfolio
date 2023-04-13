@@ -445,6 +445,27 @@ body {
   .carousel__bullet:nth-child(5) {
     animation: bullet5 40s infinite; }
 
+.hero {
+  width: 144rem;
+  margin: 0 auto;
+  background-image: url(../img/img-1-2x.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  height: 100%;
+  text-align: center; }
+  .hero__text-box {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .hero__heading {
+    color: #fbfbfb; }
+  .hero__text {
+    color: #fbfbfb;
+    font-size: 1.6rem; }
+
 .footer {
   background-color: #f0f0f1;
   text-align: center;
@@ -488,12 +509,7 @@ body {
     width: calc((100% - 2 * 1.6rem) / 3); }
 
 .header {
-  height: 87.5vh;
-  /*
-  background-image: url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-   */ }
+  height: 87.5vh; }
 
 .navigation {
   height: 7.5vh;
