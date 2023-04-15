@@ -650,29 +650,52 @@ body {
 
 .landing-page {
   text-align: center; }
+  .landing-page__logo-box {
+    position: absolute;
+    display: block;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(0) invert(1);
+    width: 20%;
+    opacity: 0.75; }
   .landing-page__text-box {
     position: absolute;
     display: block;
-    top: 80%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%); }
   .landing-page__text {
-    font-size: 3.6rem;
-    color: rgba(251, 251, 251, 0.75);
+    font-size: 1.6rem;
+    color: #fbfbfb;
     margin-bottom: 4rem; }
   .landing-page__button {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 2.4rem;
-    color: rgba(251, 251, 251, 0.75);
+    font-size: 1.6rem;
+    color: #fbfbfb;
     padding: 1.5rem 4rem;
     border: 0.2rem solid rgba(251, 251, 251, 0.75);
     border-radius: .2rem;
     display: block;
     transition: all 0.4s ease-in-out;
-    width: 50%;
+    width: 20%;
     margin: 0 auto;
     cursor: pointer; }
     .landing-page__button:hover {
       color: rgba(29, 29, 31, 0.75);
       background-color: #fbfbfb; }
+  .landing-page__icon-box {
+    position: absolute;
+    display: block;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(0) invert(1); }
+  .landing-page__brand-icon {
+    display: inline-block;
+    height: 1.6rem;
+    opacity: 0.75;
+    margin-right: 1.2rem; }
+    .landing-page__brand-icon:last-child {
+      margin-right: 0; }
