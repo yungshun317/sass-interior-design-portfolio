@@ -488,34 +488,52 @@ body {
     color: #fbfbfb;
     padding: 1.5rem 4rem;
     border: 0.1rem solid #fbfbfb;
+    border-radius: .2rem;
     display: block;
     transition: all 0.4s ease-in-out; }
     .hero__button:hover {
       color: #1d1d1f;
-      border: 0.1rem solid #1d1d1f;
       background-color: #fbfbfb; }
 
 .gallery {
   display: flex;
-  flex-wrap: wrap; }
-  .gallery__image {
+  flex-wrap: wrap;
+  /*
+  &:hover &__image-box:not(:hover) &__image {
+    filter: blur(3px)
+  }
+   */ }
+  .gallery__image-box {
     height: 62.5rem;
     flex-grow: 1;
-    display: flex; }
-    .gallery__image:not(:last-child) {
+    display: flex;
+    overflow: hidden; }
+    .gallery__image-box:not(:last-child) {
       margin-bottom: 1.6rem; }
-    .gallery__image:hover img {
-      filter: brightness(110%) contrast(130%); }
-    .gallery__image a {
-      display: contents; }
-    .gallery__image img {
-      margin: 0 .8rem 0 .8rem;
-      height: 100%;
-      object-fit: cover;
-      flex: 1 1 auto;
-      transition: all 0.4s ease-in-out; }
-  .gallery:hover .gallery__image:not(:hover) img {
-    filter: blur(3px); }
+  .gallery__link {
+    display: contents; }
+  .gallery__image {
+    margin: 0 .8rem 0 .8rem;
+    height: 100%;
+    object-fit: cover;
+    flex: 1 1 auto;
+    transition: all 1s ease-in-out; }
+    .gallery__image:hover {
+      filter: brightness(105%) contrast(130%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+  filter: brightness(50%); }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .footer {
   background-color: #f0f0f1;
@@ -629,3 +647,32 @@ body {
   .section-gallery__text {
     margin-top: 4rem;
     font-size: 1.6rem; }
+
+.landing-page {
+  text-align: center; }
+  .landing-page__text-box {
+    position: absolute;
+    display: block;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .landing-page__text {
+    font-size: 3.6rem;
+    color: rgba(251, 251, 251, 0.75);
+    margin-bottom: 4rem; }
+  .landing-page__button {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: rgba(251, 251, 251, 0.75);
+    padding: 1.5rem 4rem;
+    border: 0.2rem solid rgba(251, 251, 251, 0.75);
+    border-radius: .2rem;
+    display: block;
+    transition: all 0.4s ease-in-out;
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer; }
+    .landing-page__button:hover {
+      color: rgba(29, 29, 31, 0.75);
+      background-color: #fbfbfb; }

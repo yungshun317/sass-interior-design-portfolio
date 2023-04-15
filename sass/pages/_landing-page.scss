@@ -1,0 +1,37 @@
+.landing-page {
+  text-align: center;
+
+  &__text-box {
+    position: absolute;
+    display: block;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__text {
+    font-size: 3.6rem;
+    color: rgba($color-white, 0.75);
+    margin-bottom: 4rem;
+  }
+
+  &__button {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: rgba($color-white, 0.75);
+    padding: 1.5rem 4rem;
+    border: .2rem solid rgba($color-white, 0.75);
+    border-radius: .2rem;
+    display: block;
+    transition: all 0.4s ease-in-out;
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+
+    &:hover {
+      color: rgba($color-black, 0.75);
+      background-color: $color-white;
+    }
+  }
+}
