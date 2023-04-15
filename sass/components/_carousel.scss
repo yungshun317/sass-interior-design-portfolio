@@ -108,10 +108,10 @@
   // Cross-fading effect
   @keyframes fadeSlide1 {
     0% { opacity: 1; }
-    20% { opacity: 0; margin-left: -5%;}
+    20% { opacity: 0; margin-left: -10%;}
     40% { opacity: 0; }
     60% { opacity: 0; }
-    80% { opacity: 0; margin-left: 5%;}
+    80% { opacity: 0; margin-left: 10%;}
     100% { opacity: 1; }
   }
 
@@ -125,17 +125,17 @@
   }
 
   &__inner > *:nth-child(1) &__image {
-    animation: fadeSlide1 40s cubic-bezier(.5,0,1,.2) infinite;
+    animation: fadeSlide1 35s cubic-bezier(.5,.01,1,.01) infinite;
   }
 
   &__caption--c1 {
-    animation: fade1 40s cubic-bezier(.5,0,1,.2) infinite;
+    animation: fade1 35s cubic-bezier(.5,.01,1,.01) infinite;
   }
 
   @keyframes fadeSlide2 {
-    0% { opacity: 0; margin-left: 5%; }
+    0% { opacity: 0; margin-left: 10%; }
     20% { opacity: 1; }
-    40% { opacity: 0; margin-left: -5%; }
+    40% { opacity: 0; margin-left: -10%; }
     60% { opacity: 0; }
     80% { opacity: 0; }
     100% { opacity: 0; }
@@ -151,18 +151,18 @@
   }
 
   &__inner > *:nth-child(2) &__image {
-    animation: fadeSlide2 40s cubic-bezier(.5,0,1,.2) infinite;
+    animation: fadeSlide2 35s cubic-bezier(.5,.01,1,.01) infinite;
   }
 
   &__caption--c2 {
-    animation: fade2 40s cubic-bezier(.5,0,1,.2) infinite;
+    animation: fade2 35s cubic-bezier(.5,.01,1,.01) infinite;
   }
 
   @keyframes fadeSlide3 {
     0% { opacity: 0; }
-    20% { opacity: 0; margin-left: 5%; }
+    20% { opacity: 0; margin-left: 10%; }
     40% { opacity: 1; }
-    60% { opacity: 0; margin-left: -5%; }
+    60% { opacity: 0; margin-left: -10%; }
     80% { opacity: 0; }
     100% { opacity: 0; }
   }
@@ -177,19 +177,19 @@
   }
 
   &__inner > *:nth-child(3) &__image {
-    animation: fadeSlide3 40s cubic-bezier(.5,0,1,.2) infinite;
+    animation: fadeSlide3 35s cubic-bezier(.5,.01,1,.01) infinite;
   }
 
   &__caption--c3 {
-    animation: fade3 40s cubic-bezier(.5,0,1,.2) infinite;
+    animation: fade3 35s cubic-bezier(.5,.01,1,.01) infinite;
   }
 
   @keyframes fadeSlide4 {
     0% { opacity: 0; }
     20% { opacity: 0; }
-    40% { opacity: 0; margin-left: 5%; }
+    40% { opacity: 0; margin-left: 10%; }
     60% { opacity: 1; }
-    80% { opacity: 0; margin-left: -5%; }
+    80% { opacity: 0; margin-left: -10%; }
     100% { opacity: 0; }
   }
 
@@ -203,20 +203,20 @@
   }
 
   &__inner > *:nth-child(4) &__image {
-    animation: fadeSlide4 40s cubic-bezier(.5,0,1,.2) infinite;
+    animation: fadeSlide4 35s cubic-bezier(.5,.01,1,.01) infinite;
   }
 
   &__caption--c4 {
-    animation: fade4 40s cubic-bezier(.5,0,1,.2) infinite;
+    animation: fade4 35s cubic-bezier(.5,.01,1,.01) infinite;
   }
 
   @keyframes fadeSlide5 {
     0% { opacity: 0; }
     20% { opacity: 0; }
     40% { opacity: 0; }
-    60% { opacity: 0; margin-left: 5%; }
+    60% { opacity: 0; margin-left: 10%; }
     80% { opacity: 1; }
-    100% { opacity: 0; margin-left: -5%; }
+    100% { opacity: 0; margin-left: -10%; }
   }
 
   @keyframes fade5 {
@@ -229,11 +229,11 @@
   }
 
   &__inner > *:nth-child(5) &__image {
-    animation: fadeSlide5 40s cubic-bezier(.5,0,1,.2) infinite;
+    animation: fadeSlide5 35s cubic-bezier(.5,.01,1,.01) infinite;
   }
 
   &__caption--c5 {
-    animation: fade5 40s cubic-bezier(.5,0,1,.2) infinite;
+    animation: fade5 35s cubic-bezier(.5,.01,1,.01) infinite;
   }
 
   @keyframes bullet1 {

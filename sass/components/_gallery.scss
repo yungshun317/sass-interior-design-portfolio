@@ -1,6 +1,4 @@
 .gallery {
-  max-width: $grid-width;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 
@@ -15,7 +13,7 @@
     }
 
     &:hover img {
-      filter: brightness(120%) contrast(120%);
+      filter: brightness(110%) contrast(130%);
     }
 
     a {
@@ -32,6 +30,7 @@
   }
 
   &:hover &__image:not(:hover) img {
-    filter: brightness(80%) contrast(80%);
+    // filter: brightness(80%) contrast(100%);
+    filter: blur(3px);
   }
 }

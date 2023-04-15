@@ -1,6 +1,9 @@
 .u-center-text {
   text-align: center !important; }
 
+.u-margin-bottom-huge {
+  margin-bottom: 12rem !important; }
+
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
 
@@ -51,25 +54,35 @@ body {
    */ }
   .thumbnail a {
     display: contents; }
+  .thumbnail__photo-box {
+    flex: 1 1 auto;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex; }
   .thumbnail__photo {
     width: 100%;
     background-size: cover;
-    transition: all 0.4s ease-in-out;
+    transition: all 4s ease-out;
     cursor: pointer;
     flex: 1 1 auto;
     object-fit: cover; }
   .thumbnail:hover .thumbnail__photo {
-    filter: brightness(120%) contrast(120%); }
+    filter: brightness(130%) contrast(130%);
+    transform: scale(1.1); }
   .thumbnail:hover .thumbnail__text-box {
-    color: #004469;
     border-bottom: 0.1rem solid #004469; }
+  .thumbnail:hover .thumbnail__text-box-link {
+    color: #004469; }
   .thumbnail__text-box {
     margin-top: 1.6rem;
     padding-bottom: 1.6rem;
     transition: all .2s;
     border-bottom: 0.1rem solid #3f3d3f; }
     .thumbnail__text-box span {
-      float: right; }
+      float: right;
+      transition: all .2s; }
+  .thumbnail__text-box-link:visited {
+    color: #3f3d3f; }
   .thumbnail__heading {
     font-size: 1.6rem; }
   .thumbnail__text {
@@ -201,14 +214,14 @@ body {
     opacity: 1; }
   20% {
     opacity: 0;
-    margin-left: -5%; }
+    margin-left: -10%; }
   40% {
     opacity: 0; }
   60% {
     opacity: 0; }
   80% {
     opacity: 0;
-    margin-left: 5%; }
+    margin-left: 10%; }
   100% {
     opacity: 1; } }
 
@@ -226,19 +239,19 @@ body {
   100% {
     opacity: 1; } }
   .carousel__inner > *:nth-child(1) .carousel__image {
-    animation: fadeSlide1 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+    animation: fadeSlide1 35s cubic-bezier(0.5, 0.01, 1, 0.01) infinite; }
   .carousel__caption--c1 {
-    animation: fade1 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+    animation: fade1 35s cubic-bezier(0.5, 0.01, 1, 0.01) infinite; }
 
 @keyframes fadeSlide2 {
   0% {
     opacity: 0;
-    margin-left: 5%; }
+    margin-left: 10%; }
   20% {
     opacity: 1; }
   40% {
     opacity: 0;
-    margin-left: -5%; }
+    margin-left: -10%; }
   60% {
     opacity: 0; }
   80% {
@@ -260,21 +273,21 @@ body {
   100% {
     opacity: 0; } }
   .carousel__inner > *:nth-child(2) .carousel__image {
-    animation: fadeSlide2 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+    animation: fadeSlide2 35s cubic-bezier(0.5, 0.01, 1, 0.01) infinite; }
   .carousel__caption--c2 {
-    animation: fade2 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+    animation: fade2 35s cubic-bezier(0.5, 0.01, 1, 0.01) infinite; }
 
 @keyframes fadeSlide3 {
   0% {
     opacity: 0; }
   20% {
     opacity: 0;
-    margin-left: 5%; }
+    margin-left: 10%; }
   40% {
     opacity: 1; }
   60% {
     opacity: 0;
-    margin-left: -5%; }
+    margin-left: -10%; }
   80% {
     opacity: 0; }
   100% {
@@ -294,9 +307,9 @@ body {
   100% {
     opacity: 0; } }
   .carousel__inner > *:nth-child(3) .carousel__image {
-    animation: fadeSlide3 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+    animation: fadeSlide3 35s cubic-bezier(0.5, 0.01, 1, 0.01) infinite; }
   .carousel__caption--c3 {
-    animation: fade3 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+    animation: fade3 35s cubic-bezier(0.5, 0.01, 1, 0.01) infinite; }
 
 @keyframes fadeSlide4 {
   0% {
@@ -305,12 +318,12 @@ body {
     opacity: 0; }
   40% {
     opacity: 0;
-    margin-left: 5%; }
+    margin-left: 10%; }
   60% {
     opacity: 1; }
   80% {
     opacity: 0;
-    margin-left: -5%; }
+    margin-left: -10%; }
   100% {
     opacity: 0; } }
 
@@ -328,9 +341,9 @@ body {
   100% {
     opacity: 0; } }
   .carousel__inner > *:nth-child(4) .carousel__image {
-    animation: fadeSlide4 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+    animation: fadeSlide4 35s cubic-bezier(0.5, 0.01, 1, 0.01) infinite; }
   .carousel__caption--c4 {
-    animation: fade4 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+    animation: fade4 35s cubic-bezier(0.5, 0.01, 1, 0.01) infinite; }
 
 @keyframes fadeSlide5 {
   0% {
@@ -341,12 +354,12 @@ body {
     opacity: 0; }
   60% {
     opacity: 0;
-    margin-left: 5%; }
+    margin-left: 10%; }
   80% {
     opacity: 1; }
   100% {
     opacity: 0;
-    margin-left: -5%; } }
+    margin-left: -10%; } }
 
 @keyframes fade5 {
   0% {
@@ -362,9 +375,9 @@ body {
   100% {
     opacity: 0; } }
   .carousel__inner > *:nth-child(5) .carousel__image {
-    animation: fadeSlide5 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+    animation: fadeSlide5 35s cubic-bezier(0.5, 0.01, 1, 0.01) infinite; }
   .carousel__caption--c5 {
-    animation: fade5 40s cubic-bezier(0.5, 0, 1, 0.2) infinite; }
+    animation: fade5 35s cubic-bezier(0.5, 0.01, 1, 0.01) infinite; }
 
 @keyframes bullet1 {
   0% {
@@ -483,8 +496,6 @@ body {
       background-color: #fbfbfb; }
 
 .gallery {
-  max-width: 144rem;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap; }
   .gallery__image {
@@ -494,7 +505,7 @@ body {
     .gallery__image:not(:last-child) {
       margin-bottom: 1.6rem; }
     .gallery__image:hover img {
-      filter: brightness(120%) contrast(120%); }
+      filter: brightness(110%) contrast(130%); }
     .gallery__image a {
       display: contents; }
     .gallery__image img {
@@ -504,7 +515,7 @@ body {
       flex: 1 1 auto;
       transition: all 0.4s ease-in-out; }
   .gallery:hover .gallery__image:not(:hover) img {
-    filter: brightness(80%) contrast(80%); }
+    filter: blur(3px); }
 
 .footer {
   background-color: #f0f0f1;
@@ -588,7 +599,7 @@ body {
 
 .section-thumbnails {
   margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-bottom: 16rem;
   text-decoration: none;
   text-transform: uppercase; }
   .section-thumbnails .row {
@@ -604,12 +615,17 @@ body {
     transition-duration: 1.5s;
     transition-timing-function: ease-in-out; }
   .section-thumbnails .row .col-1-of-3:nth-child(1) .thumbnail__inview {
-    transition-delay: 0.5s; }
+    transition-delay: 0s; }
   .section-thumbnails .row .col-1-of-3:nth-child(2) .thumbnail__inview {
     transition-delay: 1s; }
   .section-thumbnails .row .col-1-of-3:nth-child(3) .thumbnail__inview {
-    transition-delay: 1.5s; }
+    transition-delay: 2s; }
 
 .section-gallery {
-  margin-top: 6rem;
-  margin-bottom: 8rem; }
+  max-width: 144rem;
+  margin: 6rem auto 12rem auto; }
+  .section-gallery__text-box {
+    width: 100%; }
+  .section-gallery__text {
+    margin-top: 4rem;
+    font-size: 1.6rem; }

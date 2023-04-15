@@ -1,6 +1,6 @@
 .section-thumbnails {
   margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-bottom: 16rem;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -25,7 +25,7 @@
   }
 
   .row .col-1-of-3:nth-child(1) .thumbnail__inview {
-    transition-delay: 0.5s;
+    transition-delay: 0s;
   }
 
   .row .col-1-of-3:nth-child(2) .thumbnail__inview {
@@ -33,6 +33,6 @@
   }
 
   .row .col-1-of-3:nth-child(3) .thumbnail__inview {
-    transition-delay: 1.5s;
+    transition-delay: 2s;
   }
 }

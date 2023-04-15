@@ -1,4 +1,14 @@
 .section-gallery {
-  margin-top: 6rem;
-  margin-bottom: 8rem;
+  max-width: $grid-width;
+  margin: 6rem auto 12rem auto;
+
+  &__text-box {
+    // max-width: $grid-width;
+    width: 100%;
+  }
+
+  &__text {
+    margin-top: 4rem;
+    font-size: 1.6rem;
+  }
 }
