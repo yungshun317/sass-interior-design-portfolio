@@ -30,15 +30,21 @@ body {
 
 .heading-primary {
   font-size: 6rem;
-  font-weight: 100; }
+  font-weight: 100;
+  line-height: 6.4rem; }
 
 .heading-secondary {
   font-size: 3.6rem;
-  font-weight: 100; }
+  font-weight: 100;
+  line-height: 4rem; }
 
 .heading-tertiary {
   font-size: 2.4rem;
-  font-weight: 100; }
+  font-weight: 100;
+  line-height: 3rem; }
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif !important; }
 
 .thumbnail {
   display: flex;
@@ -773,3 +779,26 @@ body {
     top: 15%;
     height: 90%;
     left: 25%; }
+
+.section-about {
+  height: 87.5vh;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/img-1-2x.jpg);
+  background-size: cover;
+  background-position: top; }
+  .section-about__text-box {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #736f73;
+    padding: 8rem; }
+  .section-about__heading {
+    color: #fbfbfb;
+    margin-bottom: 2rem; }
+  .section-about__text {
+    color: #fbfbfb;
+    font-size: 1.6rem; }
+    .section-about__text--1 {
+      margin-bottom: 4rem; }
