@@ -462,7 +462,7 @@ body {
 .hero {
   width: 144rem;
   margin: 0 auto;
-  background-image: url(../img/img-1-2x.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/img-1-2x.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -702,14 +702,13 @@ body {
 
 .section-services {
   width: 144rem;
-  margin: 0 auto;
-  height: 50vh; }
+  margin: 0 auto; }
   .section-services__services {
-    height: 100%;
+    height: 50vh;
     position: relative;
     display: block; }
   .section-services__service--1 {
-    background-image: url("../img/img-2-1x.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-2-1x.jpg");
     background-size: cover;
     height: 100%;
     width: 60%;
@@ -718,10 +717,48 @@ body {
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
     left: 0; }
   .section-services__service--2 {
-    background-image: url("../img/img-3-1x.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-3-1x.jpg");
     background-size: cover;
     height: 100%;
     width: 60%;
     position: absolute;
     z-index: 1;
     right: 0; }
+  .section-services__service-text-box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    .section-services__service-text-box--1 {
+      left: 40%; }
+    .section-services__service-text-box--2 {
+      left: 60%; }
+  .section-services__service-heading {
+    color: #fbfbfb; }
+  .section-services__service-text {
+    color: #fbfbfb;
+    font-size: 2.4rem; }
+
+.section-workflow {
+  width: 144rem;
+  margin: 0 auto; }
+  .section-workflow__workflow-heading {
+    margin-top: 8rem; }
+  .section-workflow__step {
+    position: relative;
+    background-color: #fbfbfb;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    text-align: center;
+    height: 10vh;
+    margin-bottom: 4rem; }
+  .section-workflow__step-text-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .section-workflow__step-heading {
+    color: #3f3d3f; }
+  .section-workflow__step-text {
+    color: #3f3d3f;
+    font-size: 1.6rem; }

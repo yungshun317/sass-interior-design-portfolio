@@ -1,17 +1,16 @@
 .section-services {
   width: $grid-width;
   margin: 0 auto;
-  height: 50vh;
 
   &__services {
-    height: 100%;
+    height: 50vh;
     position: relative;
     display: block;
   }
 
   &__service {
     &--1 {
-      background-image: url("../img/img-2-1x.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-2-1x.jpg");
       background-size: cover;
       height: 100%;
       width: 60%;
@@ -23,7 +22,7 @@
     }
 
     &--2 {
-      background-image: url("../img/img-3-1x.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-3-1x.jpg");
       background-size: cover;
       height: 100%;
       width: 60%;
@@ -33,8 +32,63 @@
       right: 0;
     }
   }
+
+  &__service-text-box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    &--1 {
+      left: 40%;
+    }
+
+    &--2 {
+      left: 60%;
+    }
+  }
+
+  &__service-heading {
+    color: $color-white;
+  }
+
+  &__service-text {
+    color: $color-white;
+    font-size: 2.4rem;
+  }
 }
 
 .section-workflow {
+  width: $grid-width;
+  margin: 0 auto;
 
+  &__workflow-heading {
+    margin-top: 8rem;
+  }
+
+  &__step {
+    position: relative;
+    background-color: $color-white;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    text-align: center;
+    height: 10vh;
+    margin-bottom: 4rem;
+  }
+
+  &__step-text-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__step-heading {
+    color: $color-gray-dark;
+  }
+
+  &__step-text {
+    color: $color-gray-dark;
+    font-size: 1.6rem;
+  }
 }

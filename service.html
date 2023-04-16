@@ -11,6 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Noto+Sans+TC:wght@100&display=swap" rel="stylesheet">
 
+  <!-- Google Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
   <link rel="icon" href="img/logo.svg" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 
@@ -41,33 +44,87 @@
   </div>
 
   <section class="section-services">
-    <div class="u-center-text u-margin-bottom-big">
+    <div class="u-center-text u-margin-bottom-big section-services__services-heading">
       <h2 class="heading-primary">
         Services
       </h2>
     </div>
     <div class="section-services__services">
-      <div class="section-services__service--1">
-        <div class="section-services__text-box">
-          <h3 class="section-services__heading heading-tertiary">Interior Design</h3>
-          <p class="section-services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra viverra massa non pellentesque. Praesent sagittis, ex quis consectetur laoreet, metus libero fringilla libero, id placerat metus mi eu risus. Sed eget mi at lectus fringilla volutpat.</p>
+      <div class="section-services__service section-services__service--1">
+        <div class="section-services__service-text-box section-services__service-text-box--1">
+          <h1 class="section-services__service-heading heading-primary">室內</h1>
+          <h3 class="section-services__service-text heading-tertiary">新成屋客變<br>中古屋翻修<br>商業空間<br>辦工空間<br>整體規劃.施工</h3>
         </div>
       </div>
-      <div class="section-services__service--2">
-        <div class="section-services__text-box">
-          <h3 class="section-services__heading heading-tertiary">Architecture</h3>
-          <p class="section-services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra viverra massa non pellentesque. Praesent sagittis, ex quis consectetur laoreet, metus libero fringilla libero, id placerat metus mi eu risus. Sed eget mi at lectus fringilla volutpat.</p>
+      <div class="section-services__service section-services__service--2">
+        <div class="section-services__service-text-box section-services__service-text-box--2">
+          <h1 class="section-services__service-heading heading-primary">建築</h1>
+          <h3 class="section-services__service-text heading-tertiary">建築規劃設計<br>土地規劃開發<br>都市更新<br>危老重建</h3>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section-workflow">
-    <div class="u-center-text u-margin-bottom-big">
+    <div class="u-center-text u-margin-bottom-big section-workflow__workflow-heading">
       <h2 class="heading-primary">
         Workflow
       </h2>
     </div>
+    <div class="section-workflow__step">
+      <div class="section-workflow__step-text-box">
+        <h3 class="section-workflow__step-heading heading-tertiary">設計諮詢</h3>
+        <p class="section-workflow__step-text">需求溝通.現場丈量.平面提案規劃後簽訂設計合約
+        </p>
+      </div>
+    </div>
+    <div class="section-workflow__step">
+      <div class="section-workflow__step-text-box">
+        <h3 class="section-workflow__step-heading heading-tertiary">設計階段</h3>
+        <p class="section-workflow__step-text">討論風格確認.預算分配.採購計畫後,進行設計圖繪製.材料搭配及工程標單製作</p>
+      </div>
+    </div>
+    <div class="section-workflow__step">
+      <div class="section-workflow__step-text-box">
+        <h3 class="section-workflow__step-heading  heading-tertiary">工程階段</h3>
+        <p class="section-workflow__step-text">確認圖面.工程報價後簽訂工程合約,進行施工</p>
+      </div>
+    </div>
+    <div class="section-workflow__icon-box">
+      <span class="material-symbols-outlined">horizontal_rule</span>
+    </div>
+    <div class="section-workflow__step">
+      <div class="section-workflow__step-text-box">
+        <h3 class="section-workflow__step-heading  heading-tertiary">完工保固</h3>
+        <p class="section-workflow__step-text">工程點交.家具軟件佈置.結案後完工保固</p>
+      </div>
+    </div>
   </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__logo-box">
+    <img src="img/logo.svg" alt="Full logo" class="footer__logo">
+  </div>
+  <div class="row">
+    <div class="col-1-of-2">
+      <div class="footer__navigation">
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">ZE Arch</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Zwork Design</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Projects</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Services</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-1-of-2">
+      <p class="footer__copyright">
+        Built by <a href="#" class="footer__link">ChouQin Info</a>.
+        Copyright &copy; by <a href="#" class="footer__link">ZWork Design</a>.
+      </p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
