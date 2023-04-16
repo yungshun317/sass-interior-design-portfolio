@@ -699,3 +699,20 @@ body {
     margin-right: 1.2rem; }
     .landing-page__brand-icon:last-child {
       margin-right: 0; }
+
+.section-services {
+  width: 144rem;
+  margin: 0 auto;
+  height: 50vh; }
+  .section-services .row {
+    height: 100%; }
+  .section-services__service--1 {
+    background-image: url("../img/img-2-1x.jpg");
+    background-size: cover;
+    height: 100%;
+    margin: 0 !important; }
+  .section-services__service--2 {
+    background-image: url("../img/img-3-1x.jpg");
+    background-size: cover;
+    height: 100%;
+    margin: 0 !important; }

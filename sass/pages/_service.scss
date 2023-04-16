@@ -1,0 +1,25 @@
+.section-services {
+  width: $grid-width;
+  margin: 0 auto;
+  height: 50vh;
+
+  .row {
+    height: 100%;
+  }
+
+  &__service {
+    &--1 {
+      background-image: url("../img/img-2-1x.jpg");
+      background-size: cover;
+      height: 100%;
+      margin: 0 !important;
+    }
+
+    &--2 {
+      background-image: url("../img/img-3-1x.jpg");
+      background-size: cover;
+      height: 100%;
+      margin: 0 !important;
+    }
+  }
+}
