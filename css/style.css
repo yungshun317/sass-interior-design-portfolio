@@ -742,7 +742,10 @@ body {
 
 .section-workflow {
   width: 144rem;
-  margin: 0 auto; }
+  margin: 0 auto 16rem auto;
+  text-align: center;
+  display: block;
+  position: relative; }
   .section-workflow__workflow-heading {
     margin-top: 8rem; }
   .section-workflow__step {
@@ -750,15 +753,23 @@ body {
     background-color: #fbfbfb;
     clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
     text-align: center;
-    height: 10vh;
+    height: 15vh;
+    margin-top: 4rem;
     margin-bottom: 4rem; }
   .section-workflow__step-text-box {
     position: absolute;
-    left: 50%;
+    left: 60%;
     top: 50%;
     transform: translate(-50%, -50%); }
   .section-workflow__step-heading {
-    color: #3f3d3f; }
+    color: #3f3d3f;
+    margin-bottom: 0.4rem; }
   .section-workflow__step-text {
     color: #3f3d3f;
     font-size: 1.6rem; }
+  .section-workflow__line {
+    border-left: 0.8rem dotted #736f73;
+    position: absolute;
+    top: 15%;
+    height: 90%;
+    left: 25%; }
