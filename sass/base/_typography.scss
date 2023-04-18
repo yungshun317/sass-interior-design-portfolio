@@ -1,8 +1,21 @@
 body {
-  font-family: 'Noto Sans TC', sans-serif;
+  // font-family: 'Noto Sans TC', sans-serif;
+  font-family: custom-sans-serif;
   font-weight: 100;
   line-height: 1.7;
   color: $color-gray-dark;
+}
+
+@font-face {
+  font-family: custom-sans-serif;
+  src: url(../fonts/NotoSansTC-Thin.otf);
+  unicode-range: U+4E00-9FFF;
+}
+
+@font-face {
+  font-family: custom-sans-serif;
+  src: url(../fonts/Montserrat-Thin.ttf);
+  unicode-range: U+00-024F;
 }
 
 .heading-primary {
