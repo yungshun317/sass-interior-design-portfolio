@@ -17,6 +17,120 @@
   <title>Interior Design Portfolio | Contact</title>
 </head>
 <body>
+<div class="navigation">
+  <div class="navigation__logo-box">
+    <img src="img/logo.svg" alt="Logo" class="navigation__logo">
+  </div>
 
+  <input type="checkbox" class="navigation__chechbox" id="navi-toggle">
+  <label for="navi-toggle" class="naivigation__button">
+    <span class="navigation__icon">&nbsp;</span>
+  </label>
+
+  <div class="navigation__background">&nbsp;</div>
+
+  <nav class="navigation__nav">
+    <ul class="navigation__list">
+      <li class="navigation__item"><a href="about.html" class="navigation__link"><span>ABOUT</span></a></li>
+      <li class="navigation__item"><a href="index.html" class="navigation__link"><span>PROJECTS</span></a></li>
+      <li class="navigation__item"><a href="service.html" class="navigation__link"><span>SERVICE</span></a></li>
+      <li class="navigation__item"><a href="contact.html" class="navigation__link"><span>CONTACT</span></a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+  <section class="section-location">
+    <div class="u-center-text u-margin-bottom-big">
+      <h2 class="heading-primary">
+        Location
+      </h2>
+    </div>
+
+    <div class="row section-location__locations">
+      <div class="col-1-of-2 section-location__photo-col">
+        <!-- <img class="section-location__photo" src="img/img-10-1x.jpg"> -->
+      </div>
+      <div class="col-1-of-2 section-location__text-col">
+        <div class="section-location__text-box">
+        <h2 class="section-location__heading heading-secondary">TAIPEI</h2>
+        <p class="section-location__text">
+          110 台北市信義區虎林街164巷6號<br>
+          No.6, Ln. 164, Hulin St., Sinyi Dist., Taipei City 110, Taiwan<br>
+          +886-2-87867102<br>
+          haodesigntaipei@gmail.com
+        </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-contact">
+    <div class="u-center-text u-margin-bottom-big">
+      <h2 class="heading-primary">
+        Contact
+      </h2>
+      <p class="section-contact__text">
+        如有設計需求或其他問題想詢問我們，歡迎填寫以下表單，我們會盡快回覆您！<br>
+        If you have any questions, please fill in the form below.
+      </p>
+    </div>
+    <div class="section-contact__form">
+      <form class="form">
+        <div class="form__group">
+          <label for="name" class="form__label">NAME</label>
+          <input type="text" class="form__input" id="name" placeholder="YOUR NAME" required>
+        </div>
+        <div class="form__group">
+          <label for="name" class="form__label">PHONE</label>
+          <input type="text" class="form__input" id="phone" placeholder="09XX-XXX-XXX" required>
+        </div>
+        <div class="form__group">
+          <label for="name" class="form__label">EMAIL</label>
+          <input type="text" class="form__input" id="email" placeholder="YOUR EMAIL" required>
+        </div>
+        <div class="form__group">
+          <label for="name" class="form__label">ADDRESS</label>
+          <input type="text" class="form__input" id="address" placeholder="TARGET ADDRESS" required>
+        </div>
+        <div class="form__group">
+          <label for="name" class="form__label">FOOTAGE</label>
+          <input type="text" class="form__input" id="footage" placeholder="TARGET FOOTAGE" required>
+        </div>
+        <div class="form__group">
+          <label for="name" class="form__label">HOUSE STATUS</label>
+          <select id="house-status" name="house-status">
+            <option value="volvo">Volvo</option>
+            <option value="toyota">Toyota</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__logo-box">
+    <img src="img/logo.svg" alt="Full logo" class="footer__logo">
+  </div>
+  <div class="row">
+    <div class="col-1-of-2">
+      <div class="footer__navigation">
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#" class="footer__link">ZE Arch</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Zwork Design</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Projects</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Services</a></li>
+          <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-1-of-2">
+      <p class="footer__copyright">
+        Built by <a href="#" class="footer__link">ChouQin Info</a>.
+        Copyright &copy; by <a href="#" class="footer__link">ZWork Design</a>.
+      </p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

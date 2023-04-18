@@ -1,0 +1,49 @@
+.section-location {
+  width: $grid-width;
+  margin: 0 auto 8rem auto;
+  display: block;
+
+  &__locations {
+    height: 40vh;
+    display: block;
+  }
+
+  &__photo-col {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-2-1x.jpg");
+    background-size: cover;
+    height: 100%;
+  }
+
+  &__photo {
+
+  }
+
+  &__text-col {
+    position: relative;
+    height: 100%;
+  }
+
+  &__text-box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+  }
+}
+
+.section-contact {
+  &__text {
+    margin-top: 6rem;
+    font-size: 1.6rem;
+  }
+}
