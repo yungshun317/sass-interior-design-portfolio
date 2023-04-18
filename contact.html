@@ -77,11 +77,11 @@
     <div class="section-contact__form">
       <form class="form">
         <div class="form__group">
-          <label for="name" class="form__label">NAME</label>
+          <label for="name" class="form__label">姓名NAME</label>
           <input type="text" class="form__input" id="name" placeholder="YOUR NAME" required>
         </div>
         <div class="form__group">
-          <label for="name" class="form__label">PHONE</label>
+          <label for="name" class="form__label">電話PHONE</label>
           <input type="text" class="form__input" id="phone" placeholder="09XX-XXX-XXX" required>
         </div>
         <div class="form__group">
@@ -89,19 +89,26 @@
           <input type="text" class="form__input" id="email" placeholder="YOUR EMAIL" required>
         </div>
         <div class="form__group">
-          <label for="name" class="form__label">ADDRESS</label>
+          <label for="name" class="form__label">裝修住址ADDRESS</label>
           <input type="text" class="form__input" id="address" placeholder="TARGET ADDRESS" required>
         </div>
         <div class="form__group">
-          <label for="name" class="form__label">FOOTAGE</label>
+          <label for="name" class="form__label">室內坪數FOOTAGE</label>
           <input type="text" class="form__input" id="footage" placeholder="TARGET FOOTAGE" required>
         </div>
-        <div class="form__group">
-          <label for="name" class="form__label">HOUSE STATUS</label>
-          <select id="house-status" name="house-status">
-            <option value="volvo">Volvo</option>
-            <option value="toyota">Toyota</option>
+        <div class="form__group form__group--select">
+          <label for="name" class="form__label">房屋現況HOUSE STATUS</label>
+          <select id="house-status" class="form__select" name="house-status">
+            <option class="form__select-item" value="new apartment">新成屋（大樓）NEW APARTMENT</option>
+            <option class="form__select-item" value="new house">新成屋（透天）NEW HOUSE</option>
+            <option class="form__select-item" value="pre-owned apartment">中古屋（大樓）PRE-OWNED APARTMENT</option>
+            <option class="form__select-item" value="pre-owned house">中古屋（透天）PRE-OWNED HOUSE</option>
+            <option class="form__select-item" value="roughcast house">毛胚屋ROUGHCAST HOUSE</option>
+            <option class="form__select-item" value="commercial retail">商空COMMERCIAL / RETAIL</option>
           </select>
+        </div>
+        <div class="form__group form__group--submit">
+          <button class="form__submit" type="submit">SUBMIT</button>
         </div>
       </form>
     </div>
