@@ -1,5 +1,5 @@
 .navigation {
-  height: 7.5vh;
+  height: 8rem;
   position: relative;
   background-color: $color-gray-light;
   max-width: $grid-width;
@@ -8,7 +8,7 @@
   &__logo-box {
     position: absolute;
     left: 0;
-    top: 2.5rem;
+    top: 2rem;
   }
 
   &__logo {

@@ -674,7 +674,7 @@ body {
   height: 87.5vh; }
 
 .navigation {
-  height: 7.5vh;
+  height: 8rem;
   position: relative;
   background-color: #f5f5f6;
   max-width: 144rem;
@@ -682,7 +682,7 @@ body {
   .navigation__logo-box {
     position: absolute;
     left: 0;
-    top: 2.5rem; }
+    top: 2rem; }
   .navigation__logo {
     height: 3.6rem; }
   .navigation__chechbox {
@@ -935,3 +935,22 @@ body {
   position: relative;
   display: block;
   height: 96rem; }
+
+.section-external-links {
+  position: relative;
+  height: 4rem;
+  margin-bottom: 16rem; }
+  .section-external-links__icon-box {
+    position: absolute;
+    display: block;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(0); }
+  .section-external-links__brand-icon {
+    display: inline-block;
+    height: 6rem;
+    opacity: 0.7;
+    margin-right: 8rem; }
+    .section-external-links__brand-icon:last-child {
+      margin-right: 0; }

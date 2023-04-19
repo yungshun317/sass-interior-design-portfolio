@@ -53,3 +53,29 @@
     height: 96rem;
   }
 }
+
+.section-external-links {
+  position: relative;
+  height: 4rem;
+  margin-bottom: 16rem;
+
+  &__icon-box {
+    position: absolute;
+    display: block;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(0);
+  }
+
+  &__brand-icon {
+    display: inline-block;
+    height: 6rem;
+    opacity: 0.7;
+    margin-right: 8rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
