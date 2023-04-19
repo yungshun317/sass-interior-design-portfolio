@@ -1,5 +1,5 @@
 .section-services {
-  width: $grid-width;
+  max-width: $grid-width;
   margin: 0 auto;
 
   &__services {
@@ -60,7 +60,7 @@
 }
 
 .section-workflow {
-  width: $grid-width;
+  max-width: $grid-width;
   margin: 0 auto 16rem auto;
   text-align: center;
   display: block;

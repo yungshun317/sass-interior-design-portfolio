@@ -2,7 +2,7 @@
   height: 7.5vh;
   position: relative;
   background-color: $color-gray-light;
-  width: $grid-width;
+  max-width: $grid-width;
   margin: 0 auto;
 
   &__logo-box {
@@ -26,11 +26,11 @@
   &__nav {
     position: absolute;
     right: 0;
-    top: 2.5rem;
+    top: 2.7rem;
   }
 
   &__list {
-    transform: scale(1.05);
+
   }
 
   &__item {

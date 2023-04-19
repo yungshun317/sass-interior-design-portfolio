@@ -1,3 +1,18 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet Portrait
+900 - 1200px: Tablet Landscape
+[1200 - 1800px] is where our normal styles apply
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+ */
 .u-center-text {
   text-align: center !important; }
 
@@ -35,7 +50,7 @@ body {
 
 @font-face {
   font-family: custom-sans-serif;
-  src: url(../fonts/Montserrat-Thin.ttf);
+  src: url(../fonts/Montserrat-ExtraLight.ttf);
   unicode-range: U+00-024F; }
 
 .heading-primary {
@@ -476,7 +491,7 @@ body {
     animation: bullet5 40s infinite; }
 
 .hero {
-  width: 144rem;
+  max-width: 144rem;
   margin: 0 auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/img-1-2x.jpg);
   background-size: cover;
@@ -644,6 +659,12 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 1.6rem; }
+    @media (max-width: 75em) {
+      .row [class^="col-"] {
+        width: calc((100% - 1.6rem) / 2) !important; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 1.6rem) / 2); }
   .row .col-1-of-3 {
@@ -656,7 +677,7 @@ body {
   height: 7.5vh;
   position: relative;
   background-color: #f5f5f6;
-  width: 144rem;
+  max-width: 144rem;
   margin: 0 auto; }
   .navigation__logo-box {
     position: absolute;
@@ -671,9 +692,7 @@ body {
   .navigation__nav {
     position: absolute;
     right: 0;
-    top: 2.5rem; }
-  .navigation__list {
-    transform: scale(1.05); }
+    top: 2.7rem; }
   .navigation__item {
     display: inline-block; }
     .navigation__item:not(:last-child) {
@@ -773,7 +792,7 @@ body {
       margin-right: 0; }
 
 .section-services {
-  width: 144rem;
+  max-width: 144rem;
   margin: 0 auto; }
   .section-services__services {
     height: 50vh;
@@ -813,7 +832,7 @@ body {
     font-size: 2.4rem; }
 
 .section-workflow {
-  width: 144rem;
+  max-width: 144rem;
   margin: 0 auto 16rem auto;
   text-align: center;
   display: block;
@@ -883,7 +902,7 @@ body {
     font-size: 1.6rem; }
 
 .section-location {
-  width: 144rem;
+  max-width: 144rem;
   margin: 0 auto 8rem auto;
   display: block; }
   .section-location__locations {

@@ -1,5 +1,5 @@
 .hero {
-  width: $grid-width;
+  max-width: $grid-width;
   margin: 0 auto;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/img-1-2x.jpg);
