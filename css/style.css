@@ -16,6 +16,9 @@ $breakpoint argument choices:
 .u-center-text {
   text-align: center !important; }
 
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
 .u-margin-bottom-huge {
   margin-bottom: 12rem !important; }
 
@@ -551,9 +554,11 @@ body {
     height: 100%;
     object-fit: cover;
     flex: 1 1 auto;
-    transition: all 1s ease-in-out; }
-    .gallery__image:hover {
-      filter: brightness(105%) contrast(130%); }
+    /*
+    &:hover {
+      filter: brightness(105%) contrast(130%);
+    }
+     */ }
 
 .bg-video {
   position: absolute;
@@ -681,6 +686,19 @@ body {
         margin-right: 0; } }
     @media (max-width: 56.25em) {
       .row .col-1-of-3:nth-child(2) {
+        margin-bottom: 6rem;
+        margin-right: 0; } }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 1.6rem) / 3) + 1.6rem); }
+    @media (max-width: 75em) {
+      .row .col-2-of-3:first-child {
+        margin-bottom: 6rem;
+        margin-left: 1.6rem; } }
+    @media (max-width: 56.25em) {
+      .row .col-2-of-3:first-child {
+        margin-right: 0; } }
+    @media (max-width: 56.25em) {
+      .row .col-2-of-3:nth-child(2) {
         margin-bottom: 6rem;
         margin-right: 0; } }
 
@@ -811,24 +829,26 @@ body {
   .section-services__services {
     height: 50vh;
     position: relative;
-    display: block; }
+    display: block;
+    margin-bottom: 16rem; }
   .section-services__service--1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-2-1x.jpg");
     background-size: cover;
     height: 100%;
-    width: 60%;
+    width: 45%;
     position: absolute;
     z-index: 2;
-    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
     left: 0; }
   .section-services__service--2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-3-1x.jpg");
     background-size: cover;
     height: 100%;
-    width: 60%;
+    width: 45%;
     position: absolute;
     z-index: 1;
     right: 0; }
+  .section-services__service-link {
+    text-decoration: none; }
   .section-services__service-text-box {
     display: block;
     position: absolute;
@@ -836,68 +856,123 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
     .section-services__service-text-box--1 {
-      left: 40%; }
+      left: 50%; }
     .section-services__service-text-box--2 {
-      left: 60%; }
+      left: 50%; }
   .section-services__service-heading {
-    color: #fbfbfb; }
+    color: #fbfbfb;
+    transition: all 0.3s ease; }
+    .section-services__service-heading:hover {
+      color: #004469; }
   .section-services__service-text {
     color: #fbfbfb;
     font-size: 2.4rem; }
 
-.section-workflow {
+.section-architect-workflow {
   max-width: 144rem;
   margin: 0 auto 16rem auto;
   text-align: center;
   display: block;
   position: relative; }
-  .section-workflow__workflow-heading {
+  .section-architect-workflow__workflow-heading {
     margin-top: 8rem; }
-  .section-workflow__step {
+  .section-architect-workflow__step {
     position: relative;
     background-color: #fbfbfb;
-    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
     text-align: center;
     height: 15vh;
     margin-top: 4rem;
     margin-bottom: 4rem; }
-  .section-workflow__step-text-box {
-    position: absolute;
-    left: 60%;
-    top: 50%;
-    transform: translate(-50%, -50%); }
-  .section-workflow__step-heading {
+  .section-architect-workflow__step-text-box {
+    text-align: center; }
+  .section-architect-workflow__step-heading {
     color: #3f3d3f;
-    margin-bottom: 0.4rem; }
-  .section-workflow__step-text {
+    margin-bottom: 4rem;
+    font-size: 3.6rem; }
+  .section-architect-workflow__step-text {
     color: #3f3d3f;
     font-size: 1.6rem; }
-  .section-workflow__line {
+  .section-architect-workflow__line {
     border-left: 0.8rem dotted #736f73;
     position: absolute;
     top: 10%;
     height: 95%;
     left: 25%; }
 
-.section-about {
-  height: 87.5vh;
+.section-workflow {
+  max-width: 144rem;
+  margin: 0 auto 16rem auto;
+  text-align: center;
+  display: block;
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/img-1-2x.jpg);
-  background-size: cover;
-  background-position: top; }
-  .section-about__text-box {
+  /*
+  &__step {
+    position: relative;
+    background-color: $color-white;
+    //clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    text-align: center;
+    height: 15vh;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+*/
+  /*
+  &__line {
+    border-left: 0.8rem dotted lighten($color-gray-dark, 20%);
     position: absolute;
+    top: 10%;
+    height: 95%;
+    left: 25%;
+  }
+ */ }
+  .section-workflow__workflow-heading {
+    margin-top: 8rem; }
+  .section-workflow__step-text-box {
+    text-align: left; }
+  .section-workflow__step-text-box-icon {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4rem; }
+    .section-workflow__step-text-box-icon span {
+      font-size: 10rem;
+      opacity: 90%; }
+  .section-workflow__step-text-box-text {
+    display: inline-block; }
+  .section-workflow__step-heading {
+    color: #3f3d3f;
+    margin-bottom: 0.4rem; }
+  .section-workflow__step-text {
+    color: #3f3d3f;
+    font-size: 1.6rem; }
+    .section-workflow__step-text span {
+      font-size: 2rem;
+      vertical-align: text-bottom; }
+
+.section-about {
+  display: block;
+  height: 80vh;
+  max-width: 100%; }
+  .section-about__photo-col {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-14-1x.jpg");
+    background-size: cover;
+    height: 100%; }
+  .section-about__text-col {
+    position: relative;
+    height: 100%; }
+  .section-about__text-box {
     display: block;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #736f73;
-    padding: 8rem; }
+    text-align: left;
+    width: 100%;
+    margin-left: 8rem; }
   .section-about__heading {
-    color: #fbfbfb;
+    color: #1d1d1f;
     margin-bottom: 2rem; }
   .section-about__text {
-    color: #fbfbfb;
+    color: #1d1d1f;
     font-size: 1.6rem; }
     .section-about__text--1 {
       margin-bottom: 4rem; }
@@ -905,9 +980,20 @@ body {
 .section-members {
   margin-top: 16rem;
   margin-bottom: 16rem;
-  text-align: center; }
+  text-align: left; }
+  .section-members__member-box {
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; }
   .section-members__photo-box {
-    margin-bottom: 8rem; }
+    margin: 0 auto 2rem auto;
+    width: 80%; }
+  .section-members__text-box {
+    width: 80%;
+    margin: 0 auto; }
+  .section-members__photo {
+    width: 100%; }
   .section-members__heading {
     margin-bottom: 2rem; }
   .section-members__title {
@@ -920,11 +1006,10 @@ body {
   margin: 0 auto 8rem auto;
   display: block; }
   .section-location__locations {
-    height: 40vh;
-    display: block; }
+    height: 45rem;
+    display: block;
+    margin-bottom: 8rem; }
   .section-location__photo-col {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-2-1x.jpg");
-    background-size: cover;
     height: 100%; }
   .section-location__text-col {
     position: relative;
@@ -934,21 +1019,33 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+    transform: translate(-100%, -50%);
+    text-align: left; }
   .section-location__heading {
     margin-bottom: 2rem; }
   .section-location__text {
     font-size: 1.6rem; }
 
-.section-contact__text {
-  margin-top: 6rem;
-  font-size: 1.6rem; }
-
-.section-contact__form {
-  position: relative;
-  display: block;
-  height: 96rem; }
+.section-contact {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  /*
+  &__form {
+    position: relative;
+    display: block;
+    height: 96rem;
+  }
+ */ }
+  .section-contact__heading a {
+    color: #004469;
+    text-decoration: none; }
+    .section-contact__heading a:hover {
+      color: #0086cf; }
+  .section-contact__text-box {
+    margin-left: 36rem; }
+  .section-contact__text {
+    font-size: 1.6rem;
+    text-align: left; }
 
 .section-external-links {
   position: relative;

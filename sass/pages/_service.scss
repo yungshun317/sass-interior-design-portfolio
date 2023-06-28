@@ -6,6 +6,7 @@
     height: 50vh;
     position: relative;
     display: block;
+    margin-bottom: 16rem;
   }
 
   &__service {
@@ -13,11 +14,11 @@
       background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-2-1x.jpg");
       background-size: cover;
       height: 100%;
-      width: 60%;
+      width: 45%;
 
       position: absolute;
       z-index: 2;
-      clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+      //clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
       left: 0;
     }
 
@@ -25,12 +26,18 @@
       background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/img-3-1x.jpg");
       background-size: cover;
       height: 100%;
-      width: 60%;
+      width: 45%;
 
       position: absolute;
       z-index: 1;
       right: 0;
     }
+  }
+
+  &__service-link {
+    text-decoration: none;
+
+
   }
 
   &__service-text-box {
@@ -41,16 +48,21 @@
     text-align: center;
 
     &--1 {
-      left: 40%;
+      left: 50%;
     }
 
     &--2 {
-      left: 60%;
+      left: 50%;
     }
   }
 
   &__service-heading {
     color: $color-white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 
   &__service-text {
@@ -59,49 +71,3 @@
   }
 }
 
-.section-workflow {
-  max-width: $grid-width;
-  margin: 0 auto 16rem auto;
-  text-align: center;
-  display: block;
-  position: relative;
-
-  &__workflow-heading {
-    margin-top: 8rem;
-  }
-
-  &__step {
-    position: relative;
-    background-color: $color-white;
-    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
-    text-align: center;
-    height: 15vh;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-  }
-
-  &__step-text-box {
-    position: absolute;
-    left: 60%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &__step-heading {
-    color: $color-gray-dark;
-    margin-bottom: 0.4rem;
-  }
-
-  &__step-text {
-    color: $color-gray-dark;
-    font-size: 1.6rem;
-  }
-
-  &__line {
-    border-left: 0.8rem dotted lighten($color-gray-dark, 20%);
-    position: absolute;
-    top: 10%;
-    height: 95%;
-    left: 25%;
-  }
-}

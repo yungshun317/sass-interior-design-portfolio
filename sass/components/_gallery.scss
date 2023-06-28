@@ -22,11 +22,13 @@
     height: 100%;
     object-fit: cover;
     flex: 1 1 auto;
-    transition: all 1s ease-in-out;
+    //transition: all 1s ease-in-out;
 
+    /*
     &:hover {
       filter: brightness(105%) contrast(130%);
     }
+     */
   }
 
   /*

@@ -49,4 +49,26 @@
       }
     }
   }
+
+  .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+
+    &:first-child {
+      @include respond(tab-land) {
+        margin-bottom: 6rem;
+        margin-left: $gutter-horizontal;
+      }
+
+      @include respond(tab-port) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      @include respond(tab-port) {
+        margin-bottom: 6rem;
+        margin-right: 0;
+      }
+    }
+  }
 }

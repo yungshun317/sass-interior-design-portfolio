@@ -1,0 +1,48 @@
+.section-architect-workflow {
+  max-width: $grid-width;
+  margin: 0 auto 16rem auto;
+  text-align: center;
+  display: block;
+  position: relative;
+
+  &__workflow-heading {
+    margin-top: 8rem;
+  }
+
+  &__step {
+    position: relative;
+    background-color: $color-white;
+    //clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    text-align: center;
+    height: 15vh;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  &__step-text-box {
+    text-align: center;
+    //position: absolute;
+    //left: 50%;
+    //top: 50%;
+    //transform: translate(-50%, -50%);
+  }
+
+  &__step-heading {
+    color: $color-gray-dark;
+    margin-bottom: 4rem;
+    font-size: 3.6rem;
+  }
+
+  &__step-text {
+    color: $color-gray-dark;
+    font-size: 1.6rem;
+  }
+
+  &__line {
+    border-left: 0.8rem dotted lighten($color-gray-dark, 20%);
+    position: absolute;
+    top: 10%;
+    height: 95%;
+    left: 25%;
+  }
+}
